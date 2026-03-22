@@ -20,14 +20,30 @@ export const metadata: Metadata = {
   description: "Deep learning flashcard app",
 };
 
-export default function RootLayout({
+import { ClerkProvider, SignInButton, UserButton } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { userId } = await auth();
+
   return (
-    <html lang="en" className={`${lexend.variable} ${plusJakartaSans.variable}`}>
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={`${lexend.variable} ${plusJakartaSans.variable}`}>
+        <body>
+          <header style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem', borderBottom: '1px solid #eaeaea' }}>
+            {!userId ? (
+              <SignInButton />
+            ) : (
+              <UserButton />
+            )}
+          </header>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
