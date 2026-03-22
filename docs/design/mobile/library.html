@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mindful Scholar - Vocabulary Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#68abff",
+              "error-container": "#fa746f",
+              "surface-container-highest": "#dce3e9",
+              "outline": "#747c81",
+              "outline-variant": "#abb3b9",
+              "on-background": "#2c3338",
+              "on-primary-container": "#002b52",
+              "inverse-surface": "#0b0f11",
+              "primary-dim": "#005498",
+              "secondary-container": "#83fba5",
+              "on-error-container": "#6e0a12",
+              "error-dim": "#67040d",
+              "on-primary": "#f8f8ff",
+              "primary-fixed": "#68abff",
+              "inverse-primary": "#68abff",
+              "inverse-on-surface": "#9a9da0",
+              "on-tertiary-fixed": "#3a2300",
+              "on-secondary": "#e8ffe8",
+              "primary-fixed-dim": "#599ef1",
+              "secondary-fixed-dim": "#75ec98",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e9eef3",
+              "on-primary-fixed": "#000c1e",
+              "tertiary-fixed-dim": "#eea439",
+              "surface": "#f7f9fc",
+              "on-tertiary-container": "#563500",
+              "on-surface": "#2c3338",
+              "tertiary-container": "#feb246",
+              "surface-container-high": "#e3e9ee",
+              "surface-dim": "#d4dbe1",
+              "primary": "#0060ad",
+              "on-error": "#fff7f6",
+              "background": "#f7f9fc",
+              "on-primary-fixed-variant": "#003461",
+              "on-secondary-fixed": "#004a22",
+              "tertiary-dim": "#754a00",
+              "surface-container-low": "#f0f4f8",
+              "secondary": "#006e36",
+              "on-tertiary": "#fff7f3",
+              "surface-bright": "#f7f9fc",
+              "surface-variant": "#dce3e9",
+              "error": "#a83836",
+              "tertiary": "#855500",
+              "on-surface-variant": "#596065",
+              "secondary-dim": "#00602f",
+              "on-tertiary-fixed-variant": "#623d00",
+              "on-secondary-container": "#005f2e",
+              "surface-tint": "#0060ad",
+              "tertiary-fixed": "#feb246",
+              "on-secondary-fixed-variant": "#006a34",
+              "secondary-fixed": "#83fba5"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(44, 51, 56, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-[#0060ad] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-lg tracking-tight text-[#0060ad]">Mindful Scholar</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-[#2c3338] hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-[#0060ad] font-bold hover:opacity-80 transition-opacity" href="#">Study</a>
+<a class="text-[#2c3338] hover:opacity-80 transition-opacity" href="#">Progress</a>
+<a class="text-[#2c3338] hover:opacity-80 transition-opacity" href="#">Profile</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary/10">
+<img alt="User Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Jk7FJmgVU31iR8NQ90gq4lU6_cWp1rpqEe3MqM2U_FSKRIIgIqLmhOnqb3p4JSQAqpiuyy9Oiwn2cHC-CWOZ1DHwuP-wvPfUPmYK7pWfvGtvA7KQPTLToRwYK03fOYaYzcJYFkoYKivx0u4aHa51y_x2a1zO_wqcQ9DpXpuWSeoDuARI41AMdItgvVpD5Aa6AUXN7K7MBV5y6RBJ7Zkq3sowvfWqJ_Mfyxd07VcpPGUGDZV8GOSFpGud65Ror2EzUvU7ua8GYM-r"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<section class="mb-12">
+<div class="flex flex-col gap-6">
+<div class="space-y-2">
+<h2 class="font-headline font-extrabold text-4xl text-on-surface tracking-tight">Vocabulary Library</h2>
+<p class="text-on-surface-variant font-body text-lg">Curate your cognitive sanctuary. Deep dive into specialized terminologies and master new concepts.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-headline font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.01] transition-transform w-full">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add New Deck
+                </button>
+</div>
+<div class="mt-8 relative">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-14 pr-6 font-body text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all focus:bg-surface-container-lowest editorial-shadow" placeholder="Search your collections..." type="text"/>
+</div>
+</section>
+<section class="flex flex-col gap-6">
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 editorial-shadow border border-outline-variant/15 flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter">In Progress</span>
+<span class="text-on-surface-variant font-label text-sm">84 Cards</span>
+</div>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-2xl text-on-surface">Modern Architecture &amp; Forms</h3>
+<p class="text-on-surface-variant font-body text-base leading-relaxed">Fundamental concepts of brutalism, minimalism, and organic architecture in the 21st century. Explore how form follows function in the digital age.</p>
+</div>
+<div class="pt-4 flex flex-col gap-3">
+<div class="flex justify-between items-center text-sm font-label font-bold text-secondary">
+<span>Progress</span>
+<span>65% Mastered</span>
+</div>
+<div class="h-2.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[65%] bg-gradient-to-r from-secondary to-secondary-fixed"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 editorial-shadow border border-outline-variant/15 flex flex-col gap-5">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-container/20 text-tertiary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="text-on-surface-variant font-label text-sm">120 Cards</span>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Cognitive Psychology</h3>
+<p class="text-on-surface-variant font-body text-base">Memory, perception, and focus mechanisms.</p>
+</div>
+<div class="pt-4 border-t border-surface-container flex justify-between items-center">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Status</span>
+<span class="font-label font-bold text-secondary">100% Mastery</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 editorial-shadow border border-outline-variant/15 flex flex-col gap-5">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="translate">translate</span>
+</div>
+<span class="text-on-surface-variant font-label text-sm">45 Cards</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="star">star</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Advanced Latin Verbs</h3>
+<p class="text-on-surface-variant font-body text-base">Deep dive into archaic and classical forms.</p>
+</div>
+<div class="pt-4 border-t border-surface-container flex justify-between items-center">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Status</span>
+<span class="font-label font-bold text-tertiary">22% Mastered</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 editorial-shadow border border-outline-variant/15 flex flex-col gap-5">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+</div>
+<span class="text-on-surface-variant font-label text-sm">210 Cards</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="star">star</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Molecular Biology</h3>
+<p class="text-on-surface-variant font-body text-base">Cellular structures and chemical pathways.</p>
+</div>
+<div class="pt-4 border-t border-surface-container flex justify-between items-center">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Status</span>
+<span class="font-label font-bold text-on-surface-variant">Not Started</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 editorial-shadow border border-outline-variant/15 flex flex-col gap-5">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-on-background/5 text-on-background rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</div>
+<span class="text-on-surface-variant font-label text-sm">32 Cards</span>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Color Theory Basics</h3>
+<p class="text-on-surface-variant font-body text-base">Harmony, contrast, and psychology.</p>
+</div>
+<div class="pt-4 border-t border-surface-container flex justify-between items-center">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Status</span>
+<span class="font-label font-bold text-secondary">100% Mastery</span>
+</div>
+</div>
+</section>
+</main>
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#f7f9fc]/80 backdrop-blur-xl z-50 rounded-t-[1.5rem] border-t border-slate-200/15 shadow-[0_-10px_40px_rgba(44,51,56,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2 hover:bg-slate-100 transition-colors rounded-[1rem]">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#0060ad] text-white rounded-[1rem] px-4 py-2">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-widest mt-1">Study</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2 hover:bg-slate-100 transition-colors rounded-[1rem]">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-widest mt-1">Progress</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2 hover:bg-slate-100 transition-colors rounded-[1rem]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+
+</body></html>

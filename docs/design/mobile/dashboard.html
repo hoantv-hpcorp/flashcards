@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mindful Scholar - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#68abff",
+              "error-container": "#fa746f",
+              "surface-container-highest": "#dce3e9",
+              "outline": "#747c81",
+              "outline-variant": "#abb3b9",
+              "on-background": "#2c3338",
+              "on-primary-container": "#002b52",
+              "inverse-surface": "#0b0f11",
+              "primary-dim": "#005498",
+              "secondary-container": "#83fba5",
+              "on-error-container": "#6e0a12",
+              "error-dim": "#67040d",
+              "on-primary": "#f8f8ff",
+              "primary-fixed": "#68abff",
+              "inverse-primary": "#68abff",
+              "inverse-on-surface": "#9a9da0",
+              "on-tertiary-fixed": "#3a2300",
+              "on-secondary": "#e8ffe8",
+              "primary-fixed-dim": "#599ef1",
+              "secondary-fixed-dim": "#75ec98",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e9eef3",
+              "on-primary-fixed": "#000c1e",
+              "tertiary-fixed-dim": "#eea439",
+              "surface": "#f7f9fc",
+              "on-tertiary-container": "#563500",
+              "on-surface": "#2c3338",
+              "tertiary-container": "#feb246",
+              "surface-container-high": "#e3e9ee",
+              "surface-dim": "#d4dbe1",
+              "primary": "#0060ad",
+              "on-error": "#fff7f6",
+              "background": "#f7f9fc",
+              "on-primary-fixed-variant": "#003461",
+              "on-secondary-fixed": "#004a22",
+              "tertiary-dim": "#754a00",
+              "surface-container-low": "#f0f4f8",
+              "secondary": "#006e36",
+              "on-tertiary": "#fff7f3",
+              "surface-bright": "#f7f9fc",
+              "surface-variant": "#dce3e9",
+              "error": "#a83836",
+              "tertiary": "#855500",
+              "on-surface-variant": "#596065",
+              "secondary-dim": "#00602f",
+              "on-tertiary-fixed-variant": "#623d00",
+              "on-secondary-container": "#005f2e",
+              "surface-tint": "#0060ad",
+              "tertiary-fixed": "#feb246",
+              "on-secondary-fixed-variant": "#006a34",
+              "secondary-fixed": "#83fba5"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Lexend', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#0060ad] dark:text-blue-400 cursor-pointer hover:opacity-80 transition-opacity">arrow_back</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#0060ad] dark:text-blue-400">Mindful Scholar</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-[#0060ad] dark:text-blue-400 font-bold font-label" href="#">Home</a>
+<a class="text-[#2c3338] dark:text-slate-400 font-label hover:opacity-80 transition-opacity" href="#">Study</a>
+<a class="text-[#2c3338] dark:text-slate-400 font-label hover:opacity-80 transition-opacity" href="#">Progress</a>
+</nav>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyf_xFlYIS1Xx9e6ETsY1O9uolxXUFVGaqo0Nag0o915reeWSzhg5iP12qkJb_9gMDhG7Kl6UQB75kJN3dzeaza_u4shyDcxxJWYtELHeOT-Q2O6xfDWue6gkbO4UeIPdRUpD8dfNGjbjh-hVSHh_S-ms9OIIfbCwpWxpM40QhKopYVfySn68AqJVOtNqrRvs7Ch9R_oooOTVW7w-LssMSnzn20ovCqnn5ZkfGCrkVdsmjA33lxN_3MXWDagXAzySjzVZxGQ9c4DpO"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-24 md:pt-32">
+<section class="mb-8">
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-1">Good morning, Alex.</h2>
+<p class="text-on-surface-variant text-sm md:text-base">You've mastered 12 new words this week. Keep the flow going.</p>
+</section>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center text-center justify-center">
+<p class="text-[10px] font-label uppercase tracking-widest text-secondary font-bold mb-1">Streak</p>
+<div class="flex items-center gap-1">
+<span class="text-2xl font-bold text-on-surface">14</span>
+<span class="material-symbols-outlined text-secondary text-sm">local_fire_department</span>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-1">Days</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center text-center justify-center">
+<p class="text-[10px] font-label uppercase tracking-widest text-primary font-bold mb-1">Goal</p>
+<div class="flex items-center gap-1">
+<span class="text-2xl font-bold text-on-surface">75%</span>
+<span class="material-symbols-outlined text-primary text-sm">donut_large</span>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-1">45 / 60m</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center text-center justify-center">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant font-bold mb-1">Vocab</p>
+<span class="text-2xl font-bold text-primary">24</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Words</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center text-center justify-center">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant font-bold mb-1">Listening</p>
+<span class="text-2xl font-bold text-secondary">15m</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Focus</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center text-center justify-center col-span-2 md:col-span-1">
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant font-bold mb-1">Review</p>
+<span class="text-2xl font-bold text-tertiary">12</span>
+<p class="text-[10px] text-on-surface-variant mt-1">Due now</p>
+</div>
+</div>
+<section>
+<button class="w-full mb-8 bg-primary text-on-primary flex items-center justify-center gap-2 py-4 rounded-2xl shadow-sm hover:opacity-90 transition-opacity active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label font-bold tracking-tight text-base">Create New Study Deck</span>
+</button><div class="flex justify-between items-center mb-4">
+<div>
+<h3 class="text-xl font-bold text-on-surface">Recommended for you</h3>
+<p class="text-xs text-on-surface-variant">Personalized study list</p>
+</div>
+<button class="text-primary text-sm font-bold hover:underline">View all</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-surface-container">
+<div class="w-12 h-12 shrink-0 bg-primary-container/20 text-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">business_center</span>
+</div>
+<div class="flex-grow min-w-0">
+<h4 class="text-base font-bold text-on-surface truncate">Business Idioms</h4>
+<p class="text-on-surface-variant text-xs truncate">Master professional workplace communication.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="hidden sm:inline text-[10px] font-label bg-surface-container-high px-2 py-1 rounded-full text-on-surface-variant whitespace-nowrap">42 Cards</span>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-surface-container">
+<div class="w-12 h-12 shrink-0 bg-secondary-container/20 text-secondary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div class="flex-grow min-w-0">
+<h4 class="text-base font-bold text-on-surface truncate">Advanced Phrasal Verbs</h4>
+<p class="text-on-surface-variant text-xs truncate">Daily conversational verbs for fluency.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="hidden sm:inline text-[10px] font-label bg-surface-container-high px-2 py-1 rounded-full text-on-surface-variant whitespace-nowrap">68 Cards</span>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-surface-container">
+<div class="w-12 h-12 shrink-0 bg-tertiary-container/20 text-tertiary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<div class="flex-grow min-w-0">
+<h4 class="text-base font-bold text-on-surface truncate">Academic Vocabulary</h4>
+<p class="text-on-surface-variant text-xs truncate">High-impact terms for IELTS/TOEFL.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="hidden sm:inline text-[10px] font-label bg-surface-container-high px-2 py-1 rounded-full text-on-surface-variant whitespace-nowrap">120 Cards</span>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 rounded-t-[1.5rem] bg-[#f7f9fc]/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200/15 shadow-[0_-10px_40px_rgba(44,51,56,0.04)] md:hidden">
+<div class="flex justify-around items-center px-4 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center bg-[#0060ad] dark:bg-blue-600 text-white rounded-[1rem] px-4 py-2 scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2c3338] dark:text-slate-400 px-4 py-2 scale-90" href="#">
+<span class="material-symbols-outlined">import_contacts</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Study</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2c3338] dark:text-slate-400 px-4 py-2 scale-90" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2c3338] dark:text-slate-400 px-4 py-2 scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

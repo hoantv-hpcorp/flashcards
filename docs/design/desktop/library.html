@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-tertiary-fixed": "#3a2300",
+                "outline-variant": "#abb3b9",
+                "surface-variant": "#dce3e9",
+                "error-container": "#fa746f",
+                "surface-dim": "#d4dbe1",
+                "on-background": "#2c3338",
+                "surface-container-low": "#f0f4f8",
+                "on-secondary-fixed": "#004a22",
+                "inverse-primary": "#68abff",
+                "primary-container": "#68abff",
+                "on-error": "#fff7f6",
+                "inverse-on-surface": "#9a9da0",
+                "tertiary-container": "#feb246",
+                "primary-fixed-dim": "#599ef1",
+                "on-tertiary": "#fff7f3",
+                "tertiary-fixed": "#feb246",
+                "on-secondary-container": "#005f2e",
+                "surface-container-highest": "#dce3e9",
+                "on-tertiary-fixed-variant": "#623d00",
+                "on-surface-variant": "#596065",
+                "surface-bright": "#f7f9fc",
+                "inverse-surface": "#0b0f11",
+                "on-primary-fixed": "#000c1e",
+                "on-error-container": "#6e0a12",
+                "tertiary-fixed-dim": "#eea439",
+                "secondary-fixed-dim": "#75ec98",
+                "surface-tint": "#0060ad",
+                "secondary-container": "#83fba5",
+                "on-secondary-fixed-variant": "#006a34",
+                "on-secondary": "#e8ffe8",
+                "on-surface": "#2c3338",
+                "secondary-fixed": "#83fba5",
+                "on-primary-container": "#002b52",
+                "on-primary-fixed-variant": "#003461",
+                "on-primary": "#f8f8ff",
+                "surface-container-high": "#e3e9ee",
+                "tertiary": "#855500",
+                "primary-dim": "#005498",
+                "error-dim": "#67040d",
+                "background": "#f7f9fc",
+                "surface-container": "#e9eef3",
+                "secondary": "#006e36",
+                "on-tertiary-container": "#563500",
+                "surface": "#f7f9fc",
+                "outline": "#747c81",
+                "secondary-dim": "#00602f",
+                "primary-fixed": "#68abff",
+                "primary": "#0060ad",
+                "tertiary-dim": "#754a00",
+                "surface-container-lowest": "#ffffff",
+                "error": "#a83836"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Lexend"],
+                "label": ["Lexend"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(44, 51, 56, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0060ad 0%, #68abff 100%);
+        }
+        .progress-gradient {
+            background: linear-gradient(135deg, #006e36 0%, #83fba5 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Sidebar Navigation (SideNavBar) - Updated to match SCREEN_7 -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-slate-50 dark:bg-slate-950 flex flex-col z-40">
+<div class="flex flex-col gap-2 p-4 h-full">
+<div class="flex items-center gap-3 px-4 py-8 mb-4">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-black text-blue-800 dark:text-blue-200 font-headline tracking-tight leading-none">Mindful Scholar</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Deep Learning</span>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 hover:text-blue-600 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Lexend'] font-medium">Home</span>
+</a>
+<!-- Active: Library -->
+<a class="flex items-center gap-3 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 rounded-xl px-4 py-3 shadow-sm font-bold transition-all duration-300 translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span class="font-['Lexend'] font-medium">Library</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 hover:text-blue-600 transition-all" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-['Lexend'] font-medium">Progress</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 hover:text-blue-600 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Lexend'] font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-2">
+<div class="bg-surface-container rounded-2xl p-4 relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-xs font-bold text-primary mb-1">Upgrade to Pro</p>
+<p class="text-[11px] text-on-surface-variant leading-tight mb-3">Unlock unlimited decks &amp; AI insights.</p>
+<button class="w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-lg shadow-md hover:brightness-110 transition-all">Get Access</button>
+</div>
+<div class="absolute -right-4 -bottom-4 w-16 h-16 bg-primary-fixed-dim/20 rounded-full blur-2xl"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Top Navigation Bar (TopNavBar) - Updated to match SCREEN_7 -->
+<header class="fixed top-0 left-64 right-0 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-30 shadow-sm">
+<div class="flex justify-between items-center px-8 h-full w-full max-w-screen-2xl mx-auto relative">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search your library..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3 pl-2">
+<div class="text-right hidden xl:block">
+<p class="text-sm font-bold text-on-surface leading-none">Alex Johnson</p>
+<p class="text-[11px] text-slate-500">Scholar Level 12</p>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of Alex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCFtMCuu3gaxvesfliiFi5Rbf3u4ITycMOcVeyGqEHXHX0SeZbBNutBc8eUoH2VQke3MFoucdhP2l_2IDDwalWxCu7TygALzWiAm6_sXt0a7C07f7mjSAQnyf9jDvBN_RR-BcG6qsGh-P_vrPziBVinq9v3qqrh6mxh8W_SfKfLIK6IT85j9q4oV4gBmX1Absqpiqwk7NL5UKdc9W5SlV5Uu0lwDfuNPFe7DticE2rrC3fXjlPaAqj0Aqh30-QcCPpqGpayWmRmjl"/>
+</div>
+</div>
+</div>
+<div class="bg-slate-100/50 dark:bg-slate-800/50 h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-16 min-h-screen">
+<div class="max-w-7xl mx-auto px-10 py-16">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<nav class="flex items-center gap-2 text-xs text-slate-400 mb-4">
+<span>Library</span>
+<span class="material-symbols-outlined text-[10px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Vocabulary Library</span>
+</nav>
+<h2 class="text-5xl font-headline font-extrabold text-on-surface tracking-tight">Vocabulary Library</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        Curate your cognitive space. Manage your study decks and track your mastery across diverse disciplines.
+                    </p>
+</div>
+<button class="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-headline font-bold hover:brightness-95 transition-all editorial-shadow active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add New Deck
+                </button>
+</div>
+<!-- Library Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Modern Architecture Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-white/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="architecture">architecture</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">124 Cards</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Modern Architecture</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Structural concepts, materials, and historical movements of the 20th century.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end text-xs font-bold uppercase tracking-wider">
+<span class="text-secondary">Mastery</span>
+<span class="text-on-surface">82%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<button class="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary font-bold text-sm">
+                        Review Deck
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Cognitive Psychology Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-white/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology">psychology</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">86 Cards</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Cognitive Psychology</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Understanding memory, perception, and problem-solving mechanisms.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end text-xs font-bold uppercase tracking-wider">
+<span class="text-secondary">Mastery</span>
+<span class="text-on-surface">45%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<button class="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary font-bold text-sm">
+                        Review Deck
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Latin Terminology Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-white/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="language">language</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">210 Cards</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Latin Terminology</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Essential roots for legal, medical, and scientific discourse.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end text-xs font-bold uppercase tracking-wider">
+<span class="text-secondary">Mastery</span>
+<span class="text-on-surface">12%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 12%"></div>
+</div>
+</div>
+<button class="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary font-bold text-sm">
+                        Review Deck
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Microbiology Basics Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-white/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-2xl bg-error-container/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-3xl" data-icon="biotech">biotech</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">54 Cards</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Microbiology Basics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Study of microscopic organisms, including viruses, bacteria, and fungi.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end text-xs font-bold uppercase tracking-wider">
+<span class="text-secondary">Mastery</span>
+<span class="text-on-surface">95%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<button class="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary font-bold text-sm">
+                        Review Deck
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Financial Derivatives Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow border border-white/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="finance">finance</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">72 Cards</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Financial Derivatives</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Advanced instruments, hedging strategies, and market dynamics.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end text-xs font-bold uppercase tracking-wider">
+<span class="text-secondary">Mastery</span>
+<span class="text-on-surface">60%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<button class="absolute bottom-6 right-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-primary font-bold text-sm">
+                        Review Deck
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Empty State / Add Card -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-[2rem] border-2 border-dashed border-outline-variant/30 hover:border-primary/50 transition-colors cursor-pointer bg-surface-container-low/30 min-h-[320px]">
+<div class="w-16 h-16 rounded-full bg-white editorial-shadow flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</div>
+<p class="font-headline font-bold text-lg text-on-surface">Create New Deck</p>
+<p class="text-sm text-slate-400 mt-1">Start a new study journey</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Quick Action (Contextual) -->
+<div class="fixed bottom-10 right-10 z-50">
+<button class="w-14 h-14 rounded-full primary-gradient text-on-primary editorial-shadow flex items-center justify-center hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</button>
+</div>
+</body></html>

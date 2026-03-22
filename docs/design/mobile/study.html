@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#83fba5",
+                        "on-background": "#2c3338",
+                        "secondary-container": "#83fba5",
+                        "on-primary": "#f8f8ff",
+                        "error-container": "#fa746f",
+                        "on-primary-container": "#002b52",
+                        "primary-container": "#68abff",
+                        "secondary-dim": "#00602f",
+                        "inverse-on-surface": "#9a9da0",
+                        "primary-fixed": "#68abff",
+                        "error": "#a83836",
+                        "surface-container-low": "#f0f4f8",
+                        "tertiary-container": "#feb246",
+                        "surface": "#f7f9fc",
+                        "surface-tint": "#0060ad",
+                        "outline-variant": "#abb3b9",
+                        "on-surface": "#2c3338",
+                        "primary-dim": "#005498",
+                        "on-tertiary-container": "#563500",
+                        "surface-container": "#e9eef3",
+                        "tertiary-fixed-dim": "#eea439",
+                        "on-error-container": "#6e0a12",
+                        "surface-bright": "#f7f9fc",
+                        "tertiary": "#855500",
+                        "surface-dim": "#d4dbe1",
+                        "secondary-fixed-dim": "#75ec98",
+                        "on-surface-variant": "#596065",
+                        "on-error": "#fff7f6",
+                        "on-primary-fixed": "#000c1e",
+                        "background": "#f7f9fc",
+                        "inverse-primary": "#68abff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#0b0f11",
+                        "outline": "#747c81",
+                        "surface-container-high": "#e3e9ee",
+                        "tertiary-dim": "#754a00",
+                        "primary-fixed-dim": "#599ef1",
+                        "on-tertiary": "#fff7f3",
+                        "on-tertiary-fixed": "#3a2300",
+                        "on-secondary-fixed": "#004a22",
+                        "surface-variant": "#dce3e9",
+                        "primary": "#0060ad",
+                        "on-tertiary-fixed-variant": "#623d00",
+                        "on-secondary-fixed-variant": "#006a34",
+                        "surface-container-highest": "#dce3e9",
+                        "tertiary-fixed": "#feb246",
+                        "on-secondary": "#e8ffe8",
+                        "on-primary-fixed-variant": "#003461",
+                        "error-dim": "#67040d",
+                        "on-secondary-container": "#005f2e",
+                        "secondary": "#006e36"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fc;
+            color: #2c3338;
+            font-family: 'Lexend', sans-serif;
+        }
+        .editorial-header {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .card-shadow {
+            box-shadow: 0 20px 40px rgba(44, 51, 56, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0060ad 0%, #68abff 100%);
+        }
+        .progress-gradient {
+            background: linear-gradient(135deg, #006e36 0%, #83fba5 100%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col">
+<section class="w-full bg-surface-container-lowest border-b border-surface-container-highest pt-8 pb-10 px-6">
+<div class="max-w-xl mx-auto space-y-8">
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-1.5 text-primary font-medium hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+<span class="font-label text-xs uppercase tracking-wider font-bold">Exit</span>
+</button>
+<div class="text-center">
+<h1 class="editorial-header text-on-surface font-extrabold text-sm tracking-tight uppercase">Advanced Spanish</h1>
+<p class="text-on-surface-variant text-[10px] font-label font-medium opacity-70">UNIT 4: ACADEMIC TERMINOLOGY</p>
+</div>
+<div class="w-12"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Daily Goal Progress</span>
+<div class="flex items-baseline gap-2">
+<span class="editorial-header text-3xl font-extrabold text-secondary">75%</span>
+<div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden self-center">
+<div class="h-full progress-gradient rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Session Cards</span>
+<div class="flex items-baseline gap-1">
+<span class="editorial-header text-3xl font-extrabold text-on-surface">12</span>
+<span class="editorial-header text-lg font-bold text-outline-variant">/ 30</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<main class="flex-1 flex flex-col items-center justify-start pt-12 px-6 pb-20 max-w-xl mx-auto w-full">
+<div class="relative w-full aspect-[4/3] flex flex-col items-center justify-center p-8 bg-surface-container-lowest rounded-xl card-shadow group mb-8">
+<div class="text-center space-y-2">
+<span class="font-label text-[10px] text-outline tracking-[0.2em] uppercase">Word</span>
+<h2 class="editorial-header text-on-surface text-3xl font-extrabold leading-tight">
+                Biblioteca
+            </h2>
+</div>
+<div class="absolute bottom-0 left-1/4 right-1/4 h-1 progress-gradient rounded-t-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="w-full flex flex-col items-center gap-6">
+<button class="primary-gradient text-on-primary w-full py-4 px-8 rounded-xl font-headline font-bold text-lg shadow-lg hover:shadow-xl transition-all transform active:scale-[0.98]">
+            Flip Card
+        </button>
+<div class="flex gap-3 w-full">
+<button class="flex-1 flex items-center justify-center gap-2 bg-error-container/10 text-error py-3.5 rounded-xl font-label text-xs font-bold hover:bg-error-container/20 transition-colors border border-error/10">
+<span class="material-symbols-outlined text-lg">refresh</span>
+                Need practice
+            </button>
+<button class="flex-1 flex items-center justify-center gap-2 bg-secondary-container/20 text-secondary py-3.5 rounded-xl font-label text-xs font-bold hover:bg-secondary-container/30 transition-colors border border-secondary/10">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                I knew it
+            </button>
+</div>
+</div>
+<div class="mt-auto pt-12 flex gap-6">
+<div class="flex items-center gap-1.5 text-outline-variant">
+<span class="px-1 py-0.5 rounded border border-outline-variant text-[9px] font-bold">SPACE</span>
+<span class="text-[10px] font-label uppercase">to flip</span>
+</div>
+<div class="flex items-center gap-1.5 text-outline-variant">
+<span class="px-1 py-0.5 rounded border border-outline-variant text-[9px] font-bold">1-2</span>
+<span class="text-[10px] font-label uppercase">for feedback</span>
+</div>
+</div>
+</main>
+<footer class="pb-8 text-center">
+<p class="font-label text-[9px] text-outline-variant uppercase tracking-[0.3em]">The Mindful Scholar • Deep Focus Mode</p>
+</footer>
+
+</body></html>
