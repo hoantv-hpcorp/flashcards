@@ -1,0 +1,403 @@
+export default function DashboardPage() {
+  return (
+    <>
+      {/* ===== DESKTOP LAYOUT (md+) ===== */}
+      <div className="hidden md:block">
+        {/* Sidebar Navigation */}
+        <aside className="fixed left-0 top-0 h-full w-64 bg-slate-50 flex flex-col z-40">
+          <div className="flex flex-col gap-2 p-4 h-full">
+            {/* Logo */}
+            <div className="flex items-center gap-3 px-4 py-8 mb-4">
+              <div className="w-10 h-10 bg-[#68abff] rounded-xl flex items-center justify-center">
+                <span className="material-symbols-outlined text-[#002b52]" style={{ fontVariationSettings: "'FILL' 1" }}>auto_stories</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-black text-blue-800 tracking-tight leading-none" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Mindful Scholar</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Deep Learning</span>
+              </div>
+            </div>
+
+            {/* Nav Links */}
+            <nav className="flex-1 space-y-1">
+              <a className="flex items-center gap-3 bg-white text-blue-700 rounded-xl px-4 py-3 shadow-sm font-bold transition-all duration-300 translate-x-1" href="/">
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
+                <span style={{ fontFamily: "var(--font-lexend), sans-serif" }} className="font-medium">Home</span>
+              </a>
+              <a className="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-xl" href="/library">
+                <span className="material-symbols-outlined">library_books</span>
+                <span style={{ fontFamily: "var(--font-lexend), sans-serif" }} className="font-medium">Library</span>
+              </a>
+              <a className="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-xl" href="#">
+                <span className="material-symbols-outlined">insights</span>
+                <span style={{ fontFamily: "var(--font-lexend), sans-serif" }} className="font-medium">Progress</span>
+              </a>
+              <a className="flex items-center gap-3 text-slate-500 px-4 py-3 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-xl" href="#">
+                <span className="material-symbols-outlined">settings</span>
+                <span style={{ fontFamily: "var(--font-lexend), sans-serif" }} className="font-medium">Settings</span>
+              </a>
+            </nav>
+
+            {/* Upgrade CTA */}
+            <div className="mt-auto p-2">
+              <div className="bg-[#e9eef3] rounded-2xl p-4 relative overflow-hidden">
+                <div className="relative z-10">
+                  <p className="text-xs font-bold text-[#0060ad] mb-1">Upgrade to Pro</p>
+                  <p className="text-[11px] text-[#596065] leading-tight mb-3">Unlock unlimited decks &amp; AI insights.</p>
+                  <button className="w-full py-2 bg-[#0060ad] text-[#f8f8ff] text-xs font-bold rounded-lg shadow-md hover:brightness-110 transition-all">Get Access</button>
+                </div>
+                <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-[#599ef1]/20 rounded-full blur-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        {/* Top Navigation Bar */}
+        <header className="fixed top-0 left-64 right-0 h-16 bg-white/80 backdrop-blur-xl z-30 shadow-sm">
+          <div className="flex justify-between items-center px-8 h-full w-full max-w-screen-2xl mx-auto relative">
+            <div className="flex items-center flex-1">
+              <div className="relative w-full max-w-md group">
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#0060ad] transition-colors">search</span>
+                <input className="w-full bg-[#f0f4f8] border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-[#0060ad]/20 focus:bg-white transition-all outline-none" placeholder="Search your library..." type="text" />
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <button className="p-2 text-slate-500 hover:text-[#0060ad] transition-colors">
+                <span className="material-symbols-outlined">notifications</span>
+              </button>
+              <button className="p-2 text-slate-500 hover:text-[#0060ad] transition-colors">
+                <span className="material-symbols-outlined">help</span>
+              </button>
+              <div className="h-8 w-px bg-slate-200 mx-2"></div>
+              <div className="flex items-center gap-3 pl-2">
+                <div className="text-right hidden xl:block">
+                  <p className="text-sm font-bold text-[#2c3338] leading-none">Alex Johnson</p>
+                  <p className="text-[11px] text-slate-500">Scholar Level 12</p>
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[#68abff] overflow-hidden">
+                  <img className="w-full h-full object-cover" alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCFtMCuu3gaxvesfliiFi5Rbf3u4ITycMOcVeyGqEHXHX0SeZbBNutBc8eUoH2VQke3MFoucdhP2l_2IDDwalWxCu7TygALzWiAm6_sXt0a7C07f7mjSAQnyf9jDvBN_RR-BcG6qsGh-P_vrPziBVinq9v3qqrh6mxh8W_SfKfLIK6IT85j9q4oV4gBmX1Absqpiqwk7NL5UKdc9W5SlV5Uu0lwDfuNPFe7DticE2rrC3fXjlPaAqj0Aqh30-QcCPpqGpayWmRmjl" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-slate-100/50 h-[1px] w-full absolute bottom-0 left-0"></div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="ml-64 pt-16 min-h-screen">
+          <div className="max-w-7xl mx-auto px-10 py-12">
+            {/* Welcome Header */}
+            <header className="mb-12">
+              <h1 className="text-4xl font-extrabold text-[#2c3338] leading-tight mb-2 tracking-tight" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>
+                Good morning, Alex.
+              </h1>
+              <p className="text-xl text-[#596065] font-light max-w-2xl">
+                You've mastered <span className="text-[#0060ad] font-bold">12 new words</span> this week. Keep the flow going.
+              </p>
+            </header>
+
+            {/* Stats Bento Grid */}
+            <section className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
+              {/* Streak */}
+              <div className="col-span-1 lg:col-span-2 bg-white p-6 rounded-3xl shadow-sm hover:shadow-md transition-all border border-[#abb3b9]/10">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center">
+                    <span className="material-symbols-outlined text-orange-600" style={{ fontVariationSettings: "'FILL' 1" }}>local_fire_department</span>
+                  </div>
+                  <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-lg">Top 5%</span>
+                </div>
+                <p className="text-[#596065] text-sm font-medium mb-1">Current Streak</p>
+                <div className="flex items-baseline gap-2">
+                  <h2 className="text-4xl font-black text-[#2c3338] tracking-tighter" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>14</h2>
+                  <span className="text-lg font-bold text-[#596065]">Days</span>
+                </div>
+              </div>
+
+              {/* Daily Goal */}
+              <div className="col-span-1 lg:col-span-2 bg-white p-6 rounded-3xl shadow-sm border border-[#abb3b9]/10">
+                <div className="flex justify-between items-center mb-6">
+                  <p className="text-[#596065] text-sm font-medium">Daily Goal</p>
+                  <span className="text-sm font-black text-[#006e36]">75%</span>
+                </div>
+                <h2 className="text-4xl font-black text-[#2c3338] tracking-tighter mb-4" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>45<span className="text-lg text-[#596065] font-medium">/60m</span></h2>
+                <div className="w-full h-3 bg-[#dce3e9] rounded-full overflow-hidden">
+                  <div className="h-full rounded-full" style={{ width: "75%", background: "linear-gradient(to right, #006e36, #83fba5)" }}></div>
+                </div>
+              </div>
+
+              {/* Review Alert */}
+              <div className="col-span-1 lg:col-span-2 bg-[#0060ad] text-[#f8f8ff] p-6 rounded-3xl shadow-lg relative overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform">
+                <div className="relative z-10">
+                  <p className="text-[#f8f8ff]/70 text-sm font-medium mb-1">Review Cards</p>
+                  <div className="flex items-center gap-3">
+                    <h2 className="text-4xl font-black tracking-tighter" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>12</h2>
+                    <span className="px-2 py-0.5 bg-white/20 rounded text-[10px] font-bold uppercase tracking-widest">Due Now</span>
+                  </div>
+                </div>
+                <a href="/study" className="relative z-10 w-fit mt-4 px-4 py-2 bg-white text-[#0060ad] rounded-xl text-sm font-bold hover:bg-[#f8f8ff] transition-colors block">Start Review</a>
+                <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+              </div>
+
+              {/* Vocab */}
+              <div className="col-span-1 lg:col-span-2 bg-[#f0f4f8] p-6 rounded-3xl border border-[#abb3b9]/10">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-[#0060ad]">translate</span>
+                  </div>
+                  <div>
+                    <p className="text-[#596065] text-xs font-bold uppercase tracking-wider">Vocab</p>
+                    <h3 className="text-xl font-bold" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>24 Words</h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Listening */}
+              <div className="col-span-1 lg:col-span-2 bg-[#f0f4f8] p-6 rounded-3xl border border-[#abb3b9]/10">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-[#006e36]">headphones</span>
+                  </div>
+                  <div>
+                    <p className="text-[#596065] text-xs font-bold uppercase tracking-wider">Listening</p>
+                    <h3 className="text-xl font-bold" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>15m Focus</h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Achievement Placeholder */}
+              <div className="col-span-1 lg:col-span-2 bg-[#f0f4f8] p-6 rounded-3xl border border-dashed border-[#abb3b9] flex flex-col items-center justify-center text-center opacity-70">
+                <span className="material-symbols-outlined text-[#747c81] mb-2">military_tech</span>
+                <p className="text-xs font-medium text-[#747c81]">Next Milestone at 20 Days</p>
+              </div>
+            </section>
+
+            {/* CTA */}
+            <div className="mb-12 flex justify-between items-center">
+              <h2 className="text-2xl font-extrabold tracking-tight" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Expand Your Knowledge</h2>
+              <button className="px-6 py-3 bg-gradient-to-r from-[#0060ad] to-[#68abff] text-[#f8f8ff] font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                <span className="material-symbols-outlined">add_circle</span>
+                <span style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Create New Study Deck</span>
+              </button>
+            </div>
+
+            {/* Recommended */}
+            <section>
+              <div className="flex justify-between items-baseline mb-8">
+                <h3 className="text-xl font-bold text-[#2c3338]" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Recommended for you</h3>
+                <a className="text-[#0060ad] font-bold text-sm hover:underline decoration-2 underline-offset-4" href="#">View all</a>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Card 1 */}
+                <div className="bg-white rounded-3xl overflow-hidden shadow-sm group border border-[#abb3b9]/10 hover:border-[#0060ad]/20 transition-all flex flex-col">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-[#0060ad]">
+                        <span className="material-symbols-outlined text-3xl">work</span>
+                      </div>
+                      <div className="flex gap-1">
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">B2</span>
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">Business</span>
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-bold mb-2 group-hover:text-[#0060ad] transition-colors" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Business Idioms</h4>
+                    <p className="text-[#596065] text-sm leading-relaxed mb-6">Master professional metaphors used in global boardrooms and corporate meetings.</p>
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                      <div className="flex items-center gap-2 text-[#596065]">
+                        <span className="material-symbols-outlined text-sm">style</span>
+                        <span className="text-xs font-medium">120 Cards</span>
+                      </div>
+                      <a href="/study" className="w-10 h-10 bg-[#68abff] text-[#002b52] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                        <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-white rounded-3xl overflow-hidden shadow-sm group border border-[#abb3b9]/10 hover:border-[#0060ad]/20 transition-all flex flex-col">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-[#006e36]">
+                        <span className="material-symbols-outlined text-3xl">bolt</span>
+                      </div>
+                      <div className="flex gap-1">
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">C1</span>
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">Grammar</span>
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-bold mb-2 group-hover:text-[#006e36] transition-colors" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Advanced Phrasal Verbs</h4>
+                    <p className="text-[#596065] text-sm leading-relaxed mb-6">Complex combinations that give you the nuance of a native speaker in academic contexts.</p>
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                      <div className="flex items-center gap-2 text-[#596065]">
+                        <span className="material-symbols-outlined text-sm">style</span>
+                        <span className="text-xs font-medium">85 Cards</span>
+                      </div>
+                      <a href="/study" className="w-10 h-10 bg-[#83fba5] text-[#005f2e] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                        <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="bg-white rounded-3xl overflow-hidden shadow-sm group border border-[#abb3b9]/10 hover:border-[#0060ad]/20 transition-all flex flex-col">
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-[#855500]">
+                        <span className="material-symbols-outlined text-3xl">school</span>
+                      </div>
+                      <div className="flex gap-1">
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">B2</span>
+                        <span className="px-2 py-1 bg-[#e9eef3] text-[10px] font-bold text-[#596065] rounded-md">IELTS</span>
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-bold mb-2 group-hover:text-[#855500] transition-colors" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Academic Vocabulary</h4>
+                    <p className="text-[#596065] text-sm leading-relaxed mb-6">Essential terminology for writing essays, reports, and delivering formal presentations.</p>
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
+                      <div className="flex items-center gap-2 text-[#596065]">
+                        <span className="material-symbols-outlined text-sm">style</span>
+                        <span className="text-xs font-medium">210 Cards</span>
+                      </div>
+                      <a href="/study" className="w-10 h-10 bg-[#feb246] text-[#563500] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                        <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        {/* Floating Chat Button */}
+        <div className="fixed bottom-8 right-8 z-50">
+          <button className="w-14 h-14 bg-[#2c3338] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+            <span className="material-symbols-outlined">chat_bubble</span>
+          </button>
+        </div>
+      </div>
+
+      {/* ===== MOBILE LAYOUT (<md) ===== */}
+      <div className="block md:hidden min-h-screen pb-32">
+        {/* Fixed Header */}
+        <header className="fixed top-0 w-full z-50 bg-[#f7f9fc]/80 backdrop-blur-xl">
+          <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <div className="flex items-center gap-4">
+              <h1 className="font-bold text-lg tracking-tight text-[#0060ad]" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Mindful Scholar</h1>
+            </div>
+            <div className="flex items-center gap-6">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#68abff]">
+                <img className="w-full h-full object-cover" alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyf_xFlYIS1Xx9e6ETsY1O9uolxXUFVGaqo0Nag0o915reeWSzhg5iP12qkJb_9gMDhG7Kl6UQB75kJN3dzeaza_u4shyDcxxJWYtELHeOT-Q2O6xfDWue6gkbO4UeIPdRUpD8dfNGjbjh-hVSHh_S-ms9OIIfbCwpWxpM40QhKopYVfySn68AqJVOtNqrRvs7Ch9R_oooOTVW7w-LssMSnzn20ovCqnn5ZkfGCrkVdsmjA33lxN_3MXWDagXAzySjzVZxGQ9c4DpO" />
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="max-w-7xl mx-auto px-6 pt-24">
+          {/* Welcome */}
+          <section className="mb-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[#2c3338] mb-1" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Good morning, Alex.</h2>
+            <p className="text-[#596065] text-sm">You've mastered 12 new words this week. Keep the flow going.</p>
+          </section>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 gap-3 mb-10">
+            <div className="bg-[#f0f4f8] p-4 rounded-xl flex flex-col items-center text-center justify-center">
+              <p className="text-[10px] uppercase tracking-widest text-[#006e36] font-bold mb-1" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Streak</p>
+              <div className="flex items-center gap-1">
+                <span className="text-2xl font-bold text-[#2c3338]">14</span>
+                <span className="material-symbols-outlined text-[#006e36] text-sm">local_fire_department</span>
+              </div>
+              <p className="text-[10px] text-[#596065] mt-1">Days</p>
+            </div>
+            <div className="bg-[#f0f4f8] p-4 rounded-xl flex flex-col items-center text-center justify-center">
+              <p className="text-[10px] uppercase tracking-widest text-[#0060ad] font-bold mb-1" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Goal</p>
+              <div className="flex items-center gap-1">
+                <span className="text-2xl font-bold text-[#2c3338]">75%</span>
+                <span className="material-symbols-outlined text-[#0060ad] text-sm">donut_large</span>
+              </div>
+              <p className="text-[10px] text-[#596065] mt-1">45 / 60m</p>
+            </div>
+            <div className="bg-[#f0f4f8] p-4 rounded-xl flex flex-col items-center text-center justify-center">
+              <p className="text-[10px] uppercase tracking-widest text-[#596065] font-bold mb-1" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Vocab</p>
+              <span className="text-2xl font-bold text-[#0060ad]">24</span>
+              <p className="text-[10px] text-[#596065] mt-1">Words</p>
+            </div>
+            <div className="bg-[#f0f4f8] p-4 rounded-xl flex flex-col items-center text-center justify-center">
+              <p className="text-[10px] uppercase tracking-widest text-[#596065] font-bold mb-1" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Listening</p>
+              <span className="text-2xl font-bold text-[#006e36]">15m</span>
+              <p className="text-[10px] text-[#596065] mt-1">Focus</p>
+            </div>
+            <div className="bg-[#f0f4f8] p-4 rounded-xl flex flex-col items-center text-center justify-center col-span-2">
+              <p className="text-[10px] uppercase tracking-widest text-[#596065] font-bold mb-1" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Review</p>
+              <span className="text-2xl font-bold text-[#855500]">12</span>
+              <p className="text-[10px] text-[#596065] mt-1">Due now</p>
+            </div>
+          </div>
+
+          {/* Deck Section */}
+          <section>
+            <a href="/study" className="w-full mb-8 bg-[#0060ad] text-[#f8f8ff] flex items-center justify-center gap-2 py-4 rounded-2xl shadow-sm hover:opacity-90 transition-opacity block text-center">
+              <span className="material-symbols-outlined">add_circle</span>
+              <span className="font-bold tracking-tight text-base" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>Create New Study Deck</span>
+            </a>
+
+            <div className="flex justify-between items-center mb-4">
+              <div>
+                <h3 className="text-xl font-bold text-[#2c3338]" style={{ fontFamily: "var(--font-plus-jakarta-sans), sans-serif" }}>Recommended for you</h3>
+                <p className="text-xs text-[#596065]">Personalized study list</p>
+              </div>
+              <button className="text-[#0060ad] text-sm font-bold hover:underline">View all</button>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              {[
+                { icon: "business_center", color: "#0060ad", bg: "#68abff", title: "Business Idioms", desc: "Master professional workplace communication.", cards: "42 Cards" },
+                { icon: "psychology", color: "#006e36", bg: "#83fba5", title: "Advanced Phrasal Verbs", desc: "Daily conversational verbs for fluency.", cards: "68 Cards" },
+                { icon: "translate", color: "#855500", bg: "#feb246", title: "Academic Vocabulary", desc: "High-impact terms for IELTS/TOEFL.", cards: "120 Cards" },
+              ].map((deck) => (
+                <div key={deck.title} className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-[#e9eef3]">
+                  <div className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center" style={{ background: deck.bg + "33", color: deck.color }}>
+                    <span className="material-symbols-outlined">{deck.icon}</span>
+                  </div>
+                  <div className="flex-grow min-w-0">
+                    <h4 className="text-base font-bold text-[#2c3338] truncate">{deck.title}</h4>
+                    <p className="text-[#596065] text-xs truncate">{deck.desc}</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="hidden sm:inline text-[10px] bg-[#e3e9ee] px-2 py-1 rounded-full text-[#596065] whitespace-nowrap" style={{ fontFamily: "var(--font-lexend), sans-serif" }}>{deck.cards}</span>
+                    <a href="/study" className="w-10 h-10 rounded-full flex items-center justify-center shadow-md" style={{ background: deck.color }}>
+                      <span className="material-symbols-outlined text-white">play_arrow</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+
+        {/* Bottom Navigation */}
+        <nav className="fixed bottom-0 left-0 w-full z-50 rounded-t-3xl bg-[#f7f9fc]/80 backdrop-blur-xl border-t border-slate-200/15 shadow-[0_-10px_40px_rgba(44,51,56,0.04)]">
+          <div className="flex justify-around items-center px-4 pb-6 pt-2">
+            <a className="flex flex-col items-center justify-center bg-[#0060ad] text-white rounded-2xl px-4 py-2" href="/">
+              <span className="material-symbols-outlined">home</span>
+              <span className="text-[10px] font-medium uppercase tracking-widest mt-1">Home</span>
+            </a>
+            <a className="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2" href="/library">
+              <span className="material-symbols-outlined">library_books</span>
+              <span className="text-[10px] font-medium uppercase tracking-widest mt-1">Library</span>
+            </a>
+            <a className="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2" href="#">
+              <span className="material-symbols-outlined">insights</span>
+              <span className="text-[10px] font-medium uppercase tracking-widest mt-1">Progress</span>
+            </a>
+            <a className="flex flex-col items-center justify-center text-[#2c3338] px-4 py-2" href="#">
+              <span className="material-symbols-outlined">settings</span>
+              <span className="text-[10px] font-medium uppercase tracking-widest mt-1">Settings</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </>
+  );
+}
